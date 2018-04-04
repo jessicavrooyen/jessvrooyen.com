@@ -4,10 +4,7 @@ import Link from 'gatsby-link';
 import { colors, fonts, media, getOuterSpace } from '../../styles/variables';
 
 const MenuWrapper = styled.nav`
-position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -24,9 +21,7 @@ position: fixed;
       position: relative;
       
       &::before {
-        position: absolute;
-        left: -1.1rem;
-        top: 50%;
+       
         
         border-radius: 100%;
         content: '';
@@ -67,10 +62,10 @@ const Nav = styled.ul`
   max-width: 14rem;
 `;
 
-const NavItems = styled.li`
-      list-style: none;
-  padding: .5rem 0;
-  line-height: 1em;
+const NavItems = styled.li` 
+    list-style: none;
+    padding: .5rem 0;
+    line-height: 1em;
   
   &:last-child {
     padding-bottom: 0;
@@ -109,7 +104,7 @@ const NavLink = styled(Link).attrs({ activeClassName: 'active' })`
 
 const Menu = () => (
   <MenuWrapper>
-    <Nav>
+    {/* <Nav>
       <NavItems>
         <a href="" rel="noopener noreferrer" target="_blank">Twitter</a>
       </NavItems>
@@ -119,7 +114,7 @@ const Menu = () => (
       <NavItems>
         <a href="" rel="noopener noreferrer" target="_blank">LinkedIn</a>
       </NavItems>
-    </Nav>
+    </Nav> */}
     <Nav>
       <NavItems>
         <NavLink exact to="/">Index</NavLink>

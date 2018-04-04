@@ -12,6 +12,7 @@ const Container = BaseContainer.extend`
 `;
 export default ({ children, location }) => (
   <main>
+  
     <Container>
       {children()}
     </Container>

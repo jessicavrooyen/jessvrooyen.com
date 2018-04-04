@@ -6,7 +6,7 @@ import Menu from '../Menu';
 import Footer from '../Footer';
 import { colors, media, getOuterSpace } from '../../styles/variables';
 
-import logo from '../../images/logo.svg';
+import Logo from '../Logo';
 
 const NavWrapper = styled.div`
     ${media.md`
@@ -32,8 +32,7 @@ const Header = styled.div`
     `}
 `;
 
-const Logo = styled.div`
-    h1 {
+const JVR = styled.div`
         img {
             height:60px;
         }
@@ -93,13 +92,13 @@ class Navigation extends Component {
     return (
       <NavWrapper>
         <Header>
-          <Logo>
+          <JVR>
             <h1>
               <Link to="/">
-                <img src={logo} alt="Jessica Van Rooyen - Portfolio" />
+                <Logo />
               </Link>
             </h1>
-          </Logo>
+          </JVR>
           <ToggleNav
             open={open}
             onClick={this.toggleNav}
