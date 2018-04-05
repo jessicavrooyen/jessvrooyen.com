@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Button from '../components/Button';
+import Link from 'gatsby-link';
 
 const opacityAnim = keyframes`
   0% {
@@ -123,6 +125,9 @@ const IndexPage = () => (
         Freelance Front-End Web Designer and Developer.
         Creator of super fast, really tasty, and superbly functional websites.
       </Text>
+      <Link to="/contact/">
+      <Button>Get in Touch</Button>
+      </Link>
   </IndexWrapper>
 );
 
