@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
-import { colors, fonts, media, getOuterSpace } from '../../styles/variables';
+import { colors, media } from '../../styles/variables';
 
 const MenuWrapper = styled.nav`
   width: 100%;
@@ -10,7 +10,6 @@ const MenuWrapper = styled.nav`
   justify-content: space-between;
   pointer-events: none;
   background-color: #fff;
-  ${getOuterSpace('padding')};
   
   ul:last-child li {
     text-align: right;
@@ -24,8 +23,6 @@ const MenuWrapper = styled.nav`
         border-radius: 100%;
         content: '';
         display: block;
-        height: .3rem;
-        width: .3rem;
         transition: transform .3s cubic-bezier(.45, 0, .1, 1), opacity .1s ease;
         will-change: transform, opacity;
       }

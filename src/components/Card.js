@@ -2,10 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
-import Overdrive from 'react-overdrive';
-
-import config from '../../config/SiteConfig';
-import * as palette from '../../config/Style';
 
 const CardItem = styled(Link)`
     min-height: 500px;
@@ -15,7 +11,7 @@ const CardItem = styled(Link)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: ${palette.COLOR};
+    color: #333;
     transition: all .4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
     &:after {
