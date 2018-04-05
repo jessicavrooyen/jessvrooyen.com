@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { media } from '../../styles/variables';
 
 const MenuWrapper = styled.div`
-display: none;
+  display: none;
   height: 15px;
   width: 1.75rem;
   flex-direction: column;
@@ -16,7 +16,7 @@ display: none;
   span {
     display: inline-block;
     height: 1px;
-    background: #fff;
+    background: #03E0F2;
   }
 
   ${props => (props.open

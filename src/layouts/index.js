@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import { Container as BaseContainer } from '../styles/shared';
 import '../styles/globals';
 // import './index.css';
@@ -10,13 +10,13 @@ import '../styles/globals';
 const Container = BaseContainer.extend`
   padding-top: 0;
 `;
-export default ({ children, location }) => (
+export default ({ children }) => (
   <main>
-  
+    <Header />
     <Container>
       {children()}
     </Container>
-    <Navigation location={location} />
+    
   </main>
 );
 

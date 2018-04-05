@@ -4,12 +4,12 @@ import Link from 'gatsby-link';
 import { colors, fonts, media, getOuterSpace } from '../../styles/variables';
 
 const MenuWrapper = styled.nav`
-
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   pointer-events: none;
+  background-color: #fff;
   ${getOuterSpace('padding')};
   
   ul:last-child li {
@@ -21,8 +21,6 @@ const MenuWrapper = styled.nav`
       position: relative;
       
       &::before {
-       
-        
         border-radius: 100%;
         content: '';
         display: block;
@@ -38,7 +36,7 @@ const MenuWrapper = styled.nav`
       }
 
       &:hover {
-        color: #fff;
+        color: #03E0F2;
         
         &::before {
           transform: translate(0, -50%);
@@ -55,31 +53,29 @@ const MenuWrapper = styled.nav`
 `;
 
 const Nav = styled.ul`
- list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 50%;
-  max-width: 14rem;
+  list-style: none;
+  ${'' /* padding: 0; */}
+  ${'' /* margin: 0; */}
+  width: 100%;
+  display: flex;
+  
 `;
 
 const NavItems = styled.li` 
-    list-style: none;
-    padding: .5rem 0;
-    line-height: 1em;
-  
-  &:last-child {
-    padding-bottom: 0;
-  }
+    padding: .5rem;
+
+    &:last-child {
+      padding-right: 0;
+    }
 
   a {
     font-size: .9rem;
-    font-family: ${fonts.mono};
+    font-family: 'Fira Sans', sans-serif;
     pointer-events: all;
     transition: color .1s ease;
-    line-height: 1em;
-    ${props => (props.highlight 
-      ? css`
-        color: ${colors.yellow500};
+    font-weight: 300;
+    ${props => (props.highlight ? css`
+        color: ${colors.blue900};
         
         &:hover::before {
           display: none !important;
@@ -92,8 +88,9 @@ const NavItems = styled.li`
 `;
 
 const NavLink = styled(Link).attrs({ activeClassName: 'active' })`
+    display: block;
     &.active {
-        color: #333;    
+        color: ${colors.blue900};    
 
         &::before {
             transform: translate(0, -50%);
