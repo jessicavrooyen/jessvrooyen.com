@@ -41,18 +41,19 @@ const ButtonContainer = styled.div`
 
     &:hover .shape {
         -webkit-animation: 1s draw linear forwards;
-  animation: 0.5s draw linear forwards;
+        animation: 0.5s draw linear forwards;
     }
-`
+
+`;
 
 
 const Button = () => (
-    <ButtonContainer>
+  <ButtonContainer>
     <svg height="60" width="260" xmlns="http://www.w3.org/2000/svg">
-        <rect class="shape" height="60" width="260" />
+      <rect className="shape" height="60" width="260" />
+      <text x="70" y="40" fontFamily="Roboto Condensed" fontSize="25" fill="white">Get in Touch</text>
     </svg>
-    <text>Get in Touch</text>
-    </ButtonContainer>
+  </ButtonContainer>
 
 );
 

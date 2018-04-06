@@ -4,19 +4,21 @@ import { media } from '../../styles/variables';
 
 const MenuWrapper = styled.div`
   display: none;
-  height: 15px;
+  margin-bottom: .9em;
+  height: 17px;
   width: 1.75rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   backface-visibility: hidden;
-  transition: transform .45s cubic-bezier(.45, 0, .07, 1);
+  transition: transform .30s cubic-bezier(.45, 0, .07, 1);
   will-change: transform;
-
+  cursor: pointer;
   span {
     display: inline-block;
-    height: 1px;
+    height: 2px;
     background: #03E0F2;
+    
   }
 
   ${props => (props.open

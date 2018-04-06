@@ -6,7 +6,7 @@ import ToggleNav from '../components/ToggleNav';
 // import Navigation from '../components/Navigation';
 import Menu from '../components/Menu';
 import { Container as Content } from '../styles/shared';
-import { colors, media, getOuterSpace } from '../styles/variables';
+import { media } from '../styles/variables';
 
 import Logo from '../components/Logo';
 
@@ -15,8 +15,7 @@ ${media.md`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 7rem;
-  ${getOuterSpace('padding')};
+  
 `}
     margin-bottom: 1.45rem;
     padding: 1.45rem 1.0875rem;
@@ -41,21 +40,20 @@ const NavWrapper = styled.div`
       right: 0;
       width: 100%;
       z-index: 10;
-
+      background-color: #23222a;
+      
     `}
-`
+`;
 
 const MenuBar = styled.div`
     ${media.md`
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      width:100%;
-      min-height: 7em;
+      width: 100%;
       
-  ${getOuterSpace('padding')};
     `}
-`
+`;
 
 const Container = Content.extend`
     display: flex;
@@ -83,7 +81,7 @@ const Container = Content.extend`
 //     li {
 //       margin: 0;
 //       transition: color .1s ease-in;
-      
+
 //          &:last-child {
 //            padding-right: 0;
 //          }
@@ -95,74 +93,65 @@ const Container = Content.extend`
 // `;
 const Shoable = styled.div`
      ${media.md`
-        background: ${colors.gray500};
         overflow: hidden;
-        transition: max-height .6s cubic-bezier(0.45, 0, .1, 1);
+        transition: max-height .3s cubic-bezier(0.45, 0, .1, 1);
         will-change: max-height;
+        width: 100%;
         
          ${props => (props.open ? css`
-             max-height: 200px;
+             max-height: 290px;
          `
-     : css`
+    : css`
              max-height: 0;
          `)}
 
-         > div {
-             ${'' /* padding: 0 3rem 3rem; */}
-         }
-              `}
-
-     ${media.sm`
-         > div {
-             ${'' /* padding: 0 2rem 2rem; */}
-         }
       `}
  `;
 
 class Header extends Component {
- constructor() {
-   super();
-   this.state = { open: false };
-   this.toggleNav = this.toggleNav.bind(this);
- }
-//  componentDidUpdate(prevProps) {
-//    const { location } = this.props;
+  constructor() {
+    super();
+    this.state = { open: false };
+    this.toggleNav = this.toggleNav.bind(this);
+  }
+  //  componentDidUpdate(prevProps) {
+  //    const { location } = this.props;
 
-//    if (location.pathname !== prevProps.location.pathname) {
-//      this.setState({ open: false });
-//    }
-//  }
- toggleNav() {
-   this.setState({ open: !this.state.open });
- }
+  //    if (location.pathname !== prevProps.location.pathname) {
+  //      this.setState({ open: false });
+  //    }
+  //  }
+  toggleNav() {
+    this.setState({ open: !this.state.open });
+  }
 
- render() {
-   const { open } = this.state;
-   return(
-  <HeaderWrapper>
-    <NavWrapper>
-      <Container>
-        <MenuBar>
-          <h1>
-            <Link to="/">
-              <Logo />
-            </Link>
-          </h1>
-          <ToggleNav
-            open={open}
-            onClick={this.toggleNav}
-            />
-          </MenuBar>
-          <Shoable open={open}>
-        
-          <Menu />
+  render() {
+    const { open } = this.state;
+    return (
+      <HeaderWrapper>
+        <NavWrapper>
+          <Container>
+            <MenuBar>
+              <h1>
+                <Link to="/">
+                  <Logo />
+                </Link>
+              </h1>
+              <ToggleNav
+                open={open}
+                onClick={this.toggleNav}
+              />
+            </MenuBar>
+            <Shoable open={open}>
 
-          </Shoable>
-          
-        </Container>
+              <Menu />
+
+            </Shoable>
+
+          </Container>
         </NavWrapper>
-    </HeaderWrapper>
-   );
+      </HeaderWrapper>
+    );
   }
 }
 

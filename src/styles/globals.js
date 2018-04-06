@@ -58,7 +58,7 @@ injectGlobal`
         color: #03E0F2;
     }
 
-    .gatsby-resp-image-wrapper {
+    ${'' /* .gatsby-resp-image-wrapper {
         margin: 2.75rem 0;
-    }
+    } */}
 `;

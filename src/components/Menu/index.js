@@ -1,21 +1,26 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
-import { colors, media } from '../../styles/variables';
+import { Container as MenuContainer } from '../../styles/shared';
+import { media } from '../../styles/variables';
+
+const Container = MenuContainer.extend`
+    width: 100%;
+`;
 
 const MenuWrapper = styled.nav`
   width: 100%;
   display: flex;
-  align-items: center;
+  text-align: right;
   justify-content: space-between;
   pointer-events: none;
-  background-color: #fff;
   
   ul:last-child li {
     text-align: right;
-    
+    margin-bottom: .5em;
+
     a {
-      transition: color .4s ease;
+      transition: color .3s ease;
       will-change: color;
       position: relative;
       
@@ -46,59 +51,87 @@ const MenuWrapper = styled.nav`
   ${media.md`
     position: static;
     padding: 0;
+
   `}
 `;
 
 const Nav = styled.ul`
   list-style: none;
-  ${'' /* padding: 0; */}
-  ${'' /* margin: 0; */}
   width: 100%;
   display: flex;
   
+
+  ${media.md`
+    display: block;
+    padding: 0;
+  `}
 `;
 
 const NavItems = styled.li` 
     padding: .5rem;
-
-    &:last-child {
-      padding-right: 0;
-    }
-
+    ${media.md`
+    &::after {
+          content: "";
+          border-bottom: 1px solid #03E0F2;
+          width: 0;
+          left: 0;
+          transition: width 1s ease;
+          position: absolute;
+        }
+        &:hover, {
+          border-bottom: 1px solid #03E0F2;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+    `}
   a {
     font-size: .9rem;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
     pointer-events: all;
     transition: color .1s ease;
-    font-weight: 300;
     ${props => (props.highlight ? css`
-        color: ${colors.blue900};
+        color: #03e0f2;
         
         &:hover::before {
           display: none !important;
         }
       `
-      : css`
-        color: ${colors.gray500};
+    : css`
+        color: #23222a;
       `)}
+    ${media.md`
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: .5rem;
+        text-align: center;
+        
+        
+        
+    `}
   }
 `;
 
-const NavLink = styled(Link).attrs({ activeClassName: 'active' })`
+const StyledLink = styled(Link).attrs({ activeClassName: 'active' })`
     display: block;
     &.active {
-        color: ${colors.blue900};    
-
+        color: #03e0f2;
+        
         &::before {
             transform: translate(0, -50%);
             opacity: 1;
+            
         }
     }
 `;
 
 const Menu = () => (
+
   <MenuWrapper>
-    {/* <Nav>
+    <Container>
+      {/* <Nav>
       <NavItems>
         <a href="" rel="noopener noreferrer" target="_blank">Twitter</a>
       </NavItems>
@@ -109,20 +142,21 @@ const Menu = () => (
         <a href="" rel="noopener noreferrer" target="_blank">LinkedIn</a>
       </NavItems>
     </Nav> */}
-    <Nav>
-      <NavItems>
-        <NavLink exact to="/">Index</NavLink>
-      </NavItems>
-      <NavItems>
-        <NavLink exact to="/about/">About</NavLink>
-      </NavItems>
-      <NavItems>
-        <NavLink exact to="/portfolio/">Portfolio</NavLink>
-      </NavItems>
-      <NavItems>
-        <NavLink exact to="/contact/">Contact</NavLink>
-      </NavItems>
-    </Nav>
+      <Nav>
+        <NavItems>
+          <StyledLink exact to="/">Index</StyledLink>
+        </NavItems>
+        <NavItems>
+          <StyledLink exact to="/about/">About</StyledLink>
+        </NavItems>
+        <NavItems>
+          <StyledLink exact to="/portfolio/">Portfolio</StyledLink>
+        </NavItems>
+        <NavItems>
+          <StyledLink exact to="/contact/">Contact</StyledLink>
+        </NavItems>
+      </Nav>
+    </Container>
   </MenuWrapper>
 );
 

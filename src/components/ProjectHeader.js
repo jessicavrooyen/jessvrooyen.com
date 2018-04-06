@@ -4,11 +4,9 @@ import Link from 'gatsby-link';
 import Overdrive from 'react-overdrive';
 
 import arrow from './left-chevron.svg';
-import * as palette from '../../config/Style';
+
 
 const Wrapper = styled.div`
-    background-color: #000000;
-    background-image: url("${palette.BG_PATTERN}");
     display: flex;
     position: relative;
 `;
@@ -16,9 +14,9 @@ const Wrapper = styled.div`
 const Content = styled.div`
     margin: 0 auto;
     width: 100%;
-    max-width: ${palette.MAX_WIDTH}px;
+    max-width: 1600px;
     padding: 2rem 1.0875rem 16rem 1.0875rem;
-    color: ${palette.SECONDARY_COLOR};
+    color: #23222a;
 `;
 
 const Back = styled(Link)`
@@ -49,7 +47,7 @@ const Avatar = styled.div`
 
 const Name = styled.h4`
     margin: 0 0 0 1rem;
-    color: ${palette.COLOR};
+    color: #333;
 `;
 
 const Details = styled.div`
@@ -58,7 +56,7 @@ const Details = styled.div`
     text-align: center;
 
     h1 {
-        color: ${palette.COLOR};
+        color: #333;
     }
 
     span {

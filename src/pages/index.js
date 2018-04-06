@@ -1,7 +1,8 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import styled, { keyframes } from 'styled-components';
 import Button from '../components/Button';
-import Link from 'gatsby-link';
+
 
 const opacityAnim = keyframes`
   0% {
@@ -15,12 +16,12 @@ const opacityAnim = keyframes`
 const squareBeforeAnim = keyframes`
   0% {
     opacity: 0;
-    ${'' /* transform: scaleX(0); */}
+    ${''}
   }
 
   100% {
     opacity: 1;
-    ${'' /* transform: scaleX(1); */}
+    ${''}
   }
 `;
 
@@ -36,7 +37,7 @@ const slideUp = keyframes`
 
 
 const Title = styled.h1`
-  font-family: "utopia-std", serif;
+  font-family: "Fira Serif", serif;
   font-weight: 700;
   font-size: 72px;
   line-height: 1;
@@ -121,13 +122,13 @@ const IndexWrapper = styled.div`
 const IndexPage = () => (
   <IndexWrapper>
     <Title>Hello, Im Jess.</Title>
-      <Text> 
+    <Text>
         Freelance Front-End Web Designer and Developer.
         Creator of super fast, really tasty, and superbly functional websites.
-      </Text>
-      <Link to="/contact/">
+    </Text>
+    <Link to="/contact/">
       <Button>Get in Touch</Button>
-      </Link>
+    </Link>
   </IndexWrapper>
 );
 

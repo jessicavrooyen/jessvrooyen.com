@@ -9,22 +9,22 @@ import '../styles/globals';
 
 const Container = BaseContainer.extend`
   padding-top: 0;
+  
 `;
 export default ({ children }) => (
   <div>
     <Helmet
-        title="Jessica Van Rooyen | Portfolio"
-        meta={[
+      title="Jessica Van Rooyen | Portfolio"
+      meta={[
             { name: 'description', content: 'Front-End Portfolio Website of Jessica Van Rooyen.' },
             { name: 'keywords', content: 'portfolio, design,  development, programming, code, front-end development, front-end design' },
             ]}
-      >
-      </Helmet>
+     />
     <Header />
     <Container>
       {children()}
     </Container>
-    </div>
+  </div>
 );
 
 
