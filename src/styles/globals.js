@@ -16,19 +16,19 @@ injectGlobal`
     }
     html, body {
         height: 100%;
-        line-height: 1em;
+        line-height: 1.5em;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
   }
   @media screen and (min-width: 20rem) {
     html {
-      font-size: calc(0.875rem + 0.5 * ((100vw - 20rem) / 60));
+      font-size: calc(1rem + 0.5 * ((100vw - 20rem) / 60));
       line-height: calc(1em + 0.3 * ((100vw - 20em) / 60));
     }
     }
     @media screen and (min-width: 80em) {
         html {
-        font-size: 1.375rem;
+        font-size: 1.5rem;
         line-height: 1.3em;
         }
     }
@@ -36,7 +36,6 @@ injectGlobal`
         background: #fff;
         color: #23222A;
         backface-visibility: hidden;
-        font-family: 'Roboto', sans-serif;
         font-weight: 200;
     }
     h1,h2,h3,h4,h5,h6 {

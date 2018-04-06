@@ -1,30 +1,7 @@
 import { css } from 'styled-components';
 
-export const colors = {
-  blue900: '#03E0F2',
-  blue500: '#94ECF8',
-  gray500: '#2D343B',
-  yellow500: '#03E0F2',
-  yellow700: '#03E0F2',
-};
-
-export const fonts = {
-  sansSerif: '\'Roboto\', stack-sans, sans-serif',
-  mono: '\'Roboto Mono\', stack-mono, monospace',
-};
-
-// export const spaces = {
-//   p500: '5rem',
-//   p400: '4rem',
-//   p300: '3rem',
-//   p200: '2rem',
-//   p100: '1rem',
-//   p50: '.5rem',
-//   p25: '.25rem',
-// };
-
 export const mq = {
-  xs: '22em',
+  xs: '22.5em',
   sm: '40em',
   md: '54em',
   lg: '78em',

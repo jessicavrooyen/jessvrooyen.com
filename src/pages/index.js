@@ -1,31 +1,30 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled, { keyframes } from 'styled-components';
+import { media } from '../styles/variables';
+
 import Button from '../components/Button';
 
-
-const opacityAnim = keyframes`
+const AnimateOpacity = keyframes`
   0% {
     opacity: 0;
-  }
-
+}
   100% {
     opacity: 1;
   }
 `;
-const squareBeforeAnim = keyframes`
-  0% {
-    opacity: 0;
-    ${''}
-  }
+// const BlockBefore = keyframes`
+//   0% {
+//     opacity: 0;
+//   }
 
-  100% {
-    opacity: 1;
-    ${''}
-  }
-`;
+//   100% {
+//     opacity: 1;
+//   }
+// `;
 
-const slideUp = keyframes`
+
+const TextIn = keyframes`
   0% {
     transform: translateY(100%);
   }
@@ -39,84 +38,92 @@ const slideUp = keyframes`
 const Title = styled.h1`
   font-family: "Fira Serif", serif;
   font-weight: 700;
-  font-size: 72px;
+  font-size: 5rem;
   line-height: 1;
   margin-bottom: 16px;
-  color: black;
+  color: #23222A;
   transform: translateY(100%);
-  animation: ${slideUp} 1.4s cubic-bezier(.54,.09,.11,1) forwards;
+  animation: ${TextIn} .7s cubic-bezier(.54,.09,.11,1) forwards;
   animation-delay: 1s;
+  
+  ${media.sm`
+  font-size: 4rem;
+  `}
 `;
 
 const Text = styled.p`
-  line-height: 1.5;
-  font-family: europa;
-  font-weight: 400;
-  color: #666;
-  font-size: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: #444;
   margin-bottom: 24px;
   transform: translateY(100%);
-  animation: ${slideUp} 1.35s cubic-bezier(.5,0,0,1) forwards;
+  animation: ${TextIn} 1.10s cubic-bezier(.5,0,0,1) forwards;
   animation-delay: 1.2s;
 `;
 
-const squareAfterAnim = keyframes`
-  0% {
-    transform: translateX(-100%) scaleX(3);
-    opacity: 1;
-  }
+// const BlockAfter = keyframes`
+//   0% {
+//     transform: translateX(-100%) scaleX(3);
+//     opacity: 1;
+//   }
 
-  90% {
-    transform: translateX(250%) scaleX(1);
-    opacity: 1;
-  }
+//   90% {
+//     transform: translateX(250%) scaleX(1);
+//     opacity: 1;
+//   }
 
-  91% {
-    transform: translateX(300%) scaleX(1);
-    opacity: 0;
-  }
+//   95% {
+//     transform: translateX(300%) scaleX(1);
+//     opacity: 0;
+//   }
 
-  100% {
-    transform: translateX(300%) scaleX(1);
-    opacity: 0;
-  }
-`;
-
+//   100% {
+//     transform: translateX(300%) scaleX(1);
+//     opacity: 0;
+//   }
+// `;
 const IndexWrapper = styled.div`
   padding: 0 2rem;
   margin-top: 96px;
   margin-bottom: 96px;
   max-width: 600px;
-  padding: 0 2rem;
   position: relative;
   opacity: 0;
-  animation: ${opacityAnim} .4s .15s ease-in-out forwards;
+  animation: ${AnimateOpacity} .4s .15s ease-in-out forwards;
 
-  &:before {
+  ${'' /* &:before {
     content: '';
     position: absolute;
     top: -20%;
     z-index: -1;
-    left: calc(55%);
-    width: 150%;
+    left: 50%;
+    width: 54%;
     height: 150%;
-    background-color: #f9fbfc;
+    background-color: #94ecf8;
     opacity: 0;
-    animation: ${squareBeforeAnim} .75s 1.75s ease-in forwards;
-  }
+    animation: ${BlockBefore} .75s 1.75s ease-in forwards;
 
-  &:after {
+    ${media.sm`
+    left: calc(59%);
+    width: 46%;
+    `}
+    }
+  } */}
+
+  ${'' /* &:after {
     content: '';
     position: absolute;
     top: -20%;
     z-index: 1;
     left: 0;
-    width: 150%;
+    width: 0%;
     height: 150%;
     background-color: #fff;
-    transform: translateX(-100%) scaleX(3);
-    animation: ${squareAfterAnim} 4.5s .15s cubic-bezier(.54,.09,.11,1) forwards;
-  }
+    transform: translateX(-100%) scaleX(3)
+    animation: ${BlockAfter} 4.5s .15s cubic-bezier(.54,.09,.11,1) forwards;
+  } */}
+
+  
 `;
 
 const IndexPage = () => (
