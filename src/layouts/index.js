@@ -11,7 +11,7 @@ const Container = BaseContainer.extend`
   padding-top: 0;
   
 `;
-export default ({ children }) => (
+export default ({ children, location }) => (
   <div>
     <Helmet
       title="Jessica Van Rooyen | Portfolio"
@@ -19,8 +19,8 @@ export default ({ children }) => (
             { name: 'description', content: 'Front-End Portfolio Website of Jessica Van Rooyen.' },
             { name: 'keywords', content: 'portfolio, design,  development, programming, code, front-end development, front-end design' },
             ]}
-     />
-    <Header />
+    />
+    <Header location={location} />
     <Container>
       {children()}
     </Container>

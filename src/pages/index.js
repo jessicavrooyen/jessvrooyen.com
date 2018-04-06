@@ -3,7 +3,9 @@ import Link from 'gatsby-link';
 import styled, { keyframes } from 'styled-components';
 import { media } from '../styles/variables';
 
-import Button from '../components/Button';
+import { StyledHeading as Title } from '../styles/shared';
+
+import ButtonCTA from '../components/Buttons/CTA';
 
 const AnimateOpacity = keyframes`
   0% {
@@ -35,13 +37,7 @@ const TextIn = keyframes`
 `;
 
 
-const Title = styled.h1`
-  font-family: "Fira Serif", serif;
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1;
-  margin-bottom: 16px;
-  color: #23222A;
+const StyledHeading = Title.extend`
   transform: translateY(100%);
   animation: ${TextIn} .7s cubic-bezier(.54,.09,.11,1) forwards;
   animation-delay: 1s;
@@ -128,13 +124,13 @@ const IndexWrapper = styled.div`
 
 const IndexPage = () => (
   <IndexWrapper>
-    <Title>Hello, Im Jess.</Title>
+    <StyledHeading>Hello, Im Jess.</StyledHeading>
     <Text>
         Freelance Front-End Web Designer and Developer.
         Creator of super fast, really tasty, and superbly functional websites.
     </Text>
     <Link to="/contact/">
-      <Button>Get in Touch</Button>
+      <ButtonCTA />
     </Link>
   </IndexWrapper>
 );

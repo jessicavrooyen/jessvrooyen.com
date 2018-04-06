@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Form from '../components/Form';
+import { StyledHeading } from '../styles/shared';
+
 const ContactPage = () => (
   <div>
-    <h1>Say Hello</h1>
+    <StyledHeading>Say Hello</StyledHeading>
     <p>Leave a message.</p>
+    <Form />
   </div>
 );
 

@@ -1,9 +1,12 @@
 import React from 'react';
+import Resume from '../components/Resume';
+import { StyledHeading } from '../styles/shared';
+
 
 const AboutPage = () => (
   <div>
-    <h1>About</h1>
-    <p>Skills, Education, and Experience</p>
+    <StyledHeading>About</StyledHeading>
+    <Resume />
   </div>
 );
 

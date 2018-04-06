@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ButtonContainer = styled.div`
     border-bottom: 1px solid #03E0F2;
-    width: 260px;
+    width: 110px;
     cursor: pointer;
 
     .shape {
@@ -14,11 +14,11 @@ const ButtonContainer = styled.div`
 
     @keyframes draw {
         0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 1px;
-    stroke: #03E0F2;
-    fill: transparent;
+            stroke-dasharray: 140 540;
+            stroke-dashoffset: -474;
+            stroke-width: 1px;
+            stroke: #03E0F2;
+            fill: transparent;
         }
         
         50% {
@@ -43,18 +43,17 @@ const ButtonContainer = styled.div`
         -webkit-animation: 1s draw linear forwards;
         animation: 0.5s draw linear forwards;
     }
-
 `;
 
 
-const Button = () => (
+const ButtonSend = () => (
   <ButtonContainer>
-    <svg height="60" width="260" xmlns="http://www.w3.org/2000/svg">
-      <rect className="shape" height="60" width="260" />
-      <text x="70" y="40" fontFamily="Roboto Condensed" fontSize="25" fill="white">Get in Touch</text>
+    <svg height="40" width="110" xmlns="http://www.w3.org/2000/svg">
+      <rect className="shape" height="40" width="110" />
+      <text x="36" y="27" fontFamily="Roboto Condensed" fontSize="18" fill="#333">Send</text>
     </svg>
   </ButtonContainer>
 
 );
 
-export default Button;
+export default ButtonSend;

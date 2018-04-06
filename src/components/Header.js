@@ -114,13 +114,13 @@ class Header extends Component {
     this.state = { open: false };
     this.toggleNav = this.toggleNav.bind(this);
   }
-  //  componentDidUpdate(prevProps) {
-  //    const { location } = this.props;
+  componentDidUpdate(prevProps) {
+    const { location } = this.props;
 
-  //    if (location.pathname !== prevProps.location.pathname) {
-  //      this.setState({ open: false });
-  //    }
-  //  }
+    if (location.pathname !== prevProps.location.pathname) {
+      this.setState({ open: false });
+    }
+  }
   toggleNav() {
     this.setState({ open: !this.state.open });
   }
