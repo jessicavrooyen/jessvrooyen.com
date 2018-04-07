@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import Header from '../components/Header';
 import { Container as BaseContainer } from '../styles/shared';
 import '../styles/globals';
-// import './index.css';
+
 
 const Container = BaseContainer.extend`
   padding-top: 0;

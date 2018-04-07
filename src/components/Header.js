@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
-import ToggleNav from '../components/ToggleNav';
 
-// import Navigation from '../components/Navigation';
+import ToggleNav from '../components/ToggleNav';
 import Menu from '../components/Menu';
 import { Container as Content } from '../styles/shared';
 import { media } from '../styles/variables';
@@ -11,15 +10,8 @@ import { media } from '../styles/variables';
 import Logo from '../components/Logo';
 
 const HeaderWrapper = styled.div`
-${media.md`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  
-`}
     margin-bottom: 1.45rem;
-    padding: 1.45rem 1.0875rem;
-    
+    padding: 0;
     h1 {
       margin: 0;
       img {
@@ -30,6 +22,12 @@ ${media.md`
         -ms-interpolation-mode: nearest-neighbor;
       }
     }
+    ${media.md`
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 2rem 1.0875rem;
+    `}
 `;
 
 const NavWrapper = styled.div`
@@ -41,11 +39,11 @@ const NavWrapper = styled.div`
       width: 100%;
       z-index: 10;
       background-color: #23222a;
-      
     `}
 `;
 
 const MenuBar = styled.div`
+    padding: .5rem;
     ${media.md`
       display: flex;
       justify-content: space-between;
@@ -63,50 +61,22 @@ const Container = Content.extend`
     align-items: center;
 `;
 
-
-// const StyledLink = styled(Link)`
-//   font-size: 0.9em;
-//   padding: 15px 10px 18px;
-//   text-transform: uppercase;
-//   letter-spacing: .1em;
-//   display: block;
-//   font-family: 'Fira Sans', sans-serif;
-//   font-weight: 300;
-// `;
-
-// const Nav = styled.nav`
-//   ul {
-//     list-style: none;
-//     display: flex;
-//     li {
-//       margin: 0;
-//       transition: color .1s ease-in;
-
-//          &:last-child {
-//            padding-right: 0;
-//          }
-//     }
-//     a {
-//       padding: 1rem;
-//     }
-//   }
-// `;
-const Shoable = styled.div`
-     ${media.md`
+const ShowMenu = styled.div`
+    ${media.md`
         overflow: hidden;
         transition: max-height .3s cubic-bezier(0.45, 0, .1, 1);
         will-change: max-height;
         width: 100%;
         
-         ${props => (props.open ? css`
-             max-height: 290px;
-         `
+        ${props => (props.open ? css`
+            max-height: 290px;
+        `
     : css`
-             max-height: 0;
-         `)}
+            max-height: 0;
+        `)}
 
       `}
- `;
+`;
 
 class Header extends Component {
   constructor() {
@@ -142,11 +112,11 @@ class Header extends Component {
                 onClick={this.toggleNav}
               />
             </MenuBar>
-            <Shoable open={open}>
+            <ShowMenu open={open}>
 
               <Menu />
 
-            </Shoable>
+            </ShowMenu>
 
           </Container>
         </NavWrapper>

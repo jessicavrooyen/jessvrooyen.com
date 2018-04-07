@@ -1,7 +1,10 @@
 import styled, { injectGlobal } from 'styled-components';
+import { normalize } from 'polished';
 
 /* eslint no-unused-expressions: off */
 injectGlobal`
+    ${normalize()}
+
     * {
         box-sizing: border-box;
         text-rendering: optimizeLegibility;
@@ -14,6 +17,7 @@ injectGlobal`
         color: #333;
         background: transparent;
     }
+
     html, body {
         height: 100%;
         line-height: 1.5em;
@@ -38,7 +42,7 @@ injectGlobal`
         backface-visibility: hidden;
         font-weight: 200;
     }
-    
+
     h1,h2,h3,h4,h5,h6 {
         font-weight: 300;
         line-height: inherit;
@@ -58,7 +62,7 @@ injectGlobal`
         color: #03E0F2;
     }
 
-    ${'' /* .gatsby-resp-image-wrapper {
+    .gatsby-resp-image-wrapper {
         margin: 2.75rem 0;
-    } */}
+    }
 `;

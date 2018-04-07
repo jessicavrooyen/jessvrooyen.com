@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export const mq = {
+export const sizes = {
   xs: '22.5em',
   sm: '40em',
   md: '54em',
@@ -9,50 +9,34 @@ export const mq = {
 };
 
 export const media = {
-  xs: (...a) => css`
-    @media (max-width: ${mq.xs}) {
-      ${css(...a)}
+  xs: (...args) => css`
+    @media (max-width: ${sizes.xs}) {
+      ${css(...args)}
     }
   `,
-  sm: (...a) => css`
-    @media (max-width: ${mq.sm}) {
-      ${css(...a)}
+  sm: (...args) => css`
+    @media (max-width: ${sizes.sm}) {
+      ${css(...args)}
     }
   `,
-  md: (...a) => css`
-    @media (max-width: ${mq.md}) {
-      ${css(...a)}
+  md: (...args) => css`
+    @media (max-width: ${sizes.md}) {
+      ${css(...args)}
     }
   `,
-  lg: (...a) => css`
-    @media (max-width: ${mq.lg}) {
-      ${css(...a)}
+  lg: (...args) => css`
+    @media (max-width: ${sizes.lg}) {
+      ${css(...args)}
     }
   `,
-  xl: (...a) => css`
-    @media (max-width: ${mq.xl}) {
-      ${css(...a)}
+  xl: (...args) => css`
+    @media (max-width: ${sizes.xl}) {
+      ${css(...args)}
     }
   `,
-  hover: (...a) => css`
+  hover: (...args) => css`
     @media not all and (hover: none) {
-      ${css(...a)}
+      ${css(...args)}
     }
   `,
 };
-
-// const rule = (d, v) => `${d}: ${v};`;
-
-// export const getOuterSpace = p =>
-//   css`
-//     ${rule(p, spaces.p500)}
-//     ${media.lg`
-//       ${rule(p, spaces.p300)}
-//     `}
-//     ${media.md`
-//       ${rule(p, spaces.p300)}
-//     `}
-//     ${media.sm`
-//       ${rule(p, spaces.p200)}
-//     `}
-//   `;

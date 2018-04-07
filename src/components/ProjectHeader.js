@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
-import Overdrive from 'react-overdrive';
 
 import arrow from './left-chevron.svg';
 
@@ -76,11 +75,11 @@ const ProjectHeader = ({
     <Content>
       <Back to="/">
         <img src={arrow} data-info="back" alt="test" />
-        <Overdrive id="avatar-to-back">
+        <div id="avatar-to-back">
           <Avatar>
             <img src={avatar} alt={name} />
           </Avatar>
-        </Overdrive>
+        </div>
         <Overdrive id="name-to-back">
           <Name>{name}</Name>
         </Overdrive>

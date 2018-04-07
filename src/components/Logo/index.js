@@ -5,6 +5,11 @@ import { media } from '../../styles/variables';
 
 const Container = styled.div`
   svg {
+    width: 230px;
+    &:hover {
+        fill: #03e0f2;
+        transition: all .3s  ease-in;
+      }
      ${media.md`
       width: 200px;
       fill: white;

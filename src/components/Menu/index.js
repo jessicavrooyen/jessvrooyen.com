@@ -70,7 +70,7 @@ const Nav = styled.ul`
 const NavItems = styled.li` 
     padding: .5rem;
     ${media.md`
-    &::after {
+    &:after {
           content: "";
           border-bottom: 1px solid #03E0F2;
           width: 0;
@@ -105,11 +105,8 @@ const NavItems = styled.li`
         color: white;
         font-size: 1rem;
         font-weight: 400;
-        padding: .5rem;
+        padding: .4rem 0 0 0;
         text-align: center;
-        
-        
-        
     `}
   }
 `;

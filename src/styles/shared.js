@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
     max-width: 80em;
     margin: 0 auto;
-    padding: 1.45rem 1.0875rem;
+    padding: 1rem 1.0875rem;
 `;
 
 export const StyledHeading = styled.h1`

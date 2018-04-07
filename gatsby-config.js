@@ -1,3 +1,6 @@
+const autoprefixer = require('autoprefixer');
+const rucksackCSS = require('rucksack-css');
+
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -34,6 +37,16 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-postcss-sass',
+      options: {
+        postCssPlugins: [
+          autoprefixer(),
+          rucksackCSS(),
+        ],
+        precision: 8,
       },
     },
     {
