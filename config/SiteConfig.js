@@ -17,21 +17,15 @@ module.exports = {
   themeColor: '#3498DB',
   backgroundColor: '#2b2e3c',
 
-  // Settings for typography.js
-  headerFontFamily: 'Open Sans',
-  bodyFontFamily: 'Merriweather',
-  baseFontSize: '16px',
-
-
   name: 'Jessica Van Rooyen',
   socialMedia: [
     {
       url: '',
-      name: 'Facebook',
+      name: 'Twitter',
     },
     {
       url: '',
-      name: 'Instagram',
+      name: 'Github',
     },
   ],
 };

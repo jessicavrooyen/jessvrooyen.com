@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Form from '../components/Form';
-import { StyledHeading } from '../styles/shared';
+import { StyledHeading2 } from '../styles/shared';
 
 const ContactPage = () => (
   <div>
-    <StyledHeading>Say Hello</StyledHeading>
+    <StyledHeading2>Say Hello</StyledHeading2>
     <p>Leave a message.</p>
     <Form />
   </div>

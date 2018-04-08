@@ -26,13 +26,13 @@ injectGlobal`
   }
   @media screen and (min-width: 20rem) {
     html {
-      font-size: calc(1rem + 0.5 * ((100vw - 20rem) / 60));
+      font-size: calc(1rem + 0.3 * ((100vw - 20rem) / 60));
       line-height: calc(1em + 0.3 * ((100vw - 20em) / 60));
     }
     }
     @media screen and (min-width: 80em) {
         html {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 1.3em;
         }
     }

@@ -125,27 +125,15 @@ const StyledLink = styled(Link).attrs({ activeClassName: 'active' })`
 `;
 
 const Menu = () => (
-
   <MenuWrapper>
     <Container>
-      {/* <Nav>
-      <NavItems>
-        <a href="" rel="noopener noreferrer" target="_blank">Twitter</a>
-      </NavItems>
-      <NavItems>
-        <a href="" rel="noopener noreferrer" target="_blank">Github</a>
-      </NavItems>
-      <NavItems>
-        <a href="" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-      </NavItems>
-    </Nav> */}
       <Nav>
         <NavItems>
           <StyledLink exact to="/">Index</StyledLink>
         </NavItems>
-        <NavItems>
+        {/* <NavItems>
           <StyledLink exact to="/about/">About</StyledLink>
-        </NavItems>
+        </NavItems> */}
         <NavItems>
           <StyledLink exact to="/portfolio/">Portfolio</StyledLink>
         </NavItems>

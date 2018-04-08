@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import Link from 'gatsby-link';
 
-import ToggleNav from '../components/ToggleNav';
-import Menu from '../components/Menu';
-import { Container as Content } from '../styles/shared';
-import { media } from '../styles/variables';
+import ToggleNav from '../ToggleNav';
+import Menu from '../Menu';
+import { Container as Content } from '../../styles/shared';
+import { media } from '../../styles/variables';
 
-import Logo from '../components/Logo';
+import Logo from '../Logo';
 
 const HeaderWrapper = styled.div`
     margin-bottom: 1.45rem;

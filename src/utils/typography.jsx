@@ -4,7 +4,7 @@ import Typography from 'typography';
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.5,
-  headerFontFamily: ['Fira Serif', 'sans-serif'],
+  headerFontFamily: ['Fira Serif', 'serif'],
   bodyFontFamily: ['Roboto Condensed', 'sans-serif'],
   scaleRatio: 2.5,
   headerWeight: 700,

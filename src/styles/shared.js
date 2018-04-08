@@ -16,8 +16,11 @@ export const StyledHeading = styled.h1`
 `;
 
 export const StyledHeading2 = StyledHeading.extend`
-        font-weight: 300;
-        font-size: 1.5rem;
-        margin: 1.2rem 0 .5rem 0;
+        font-size: 3rem;
+        text-align: center;
+        border-bottom: 2px solid #252525;
+        padding-bottom: 1rem;
+        width: 500px;
+        margin: 0 auto 4rem auto;
 `;
 
