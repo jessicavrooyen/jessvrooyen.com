@@ -1,10 +1,7 @@
 ---
-cover: "./matt-cannon.jpg"
+cover: "./01_scene.jpg"
 date: "2017-12-04"
-title: "Matt Cannon"
+title: "Coffee Festival"
 areas:
     - Photography
 ---
-
-![](./isak-dalsfelt.jpg)
-![](./trevor-cole.jpg)

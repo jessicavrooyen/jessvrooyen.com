@@ -56,31 +56,6 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.jsx',
       },
     },
-    // 'gatsby-plugin-sitemap',
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     name: 'Jessica Van Rooyen',
-    //     short_name: 'JVR',
-    //     description: '',
-    //     start_url: '/',
-    //     background_color: '#fff',
-    //     theme_color: '#03E0F2',
-    //     display: 'minimal-ui',
-    //     icons: [
-    //       {
-    //         src: '/images/logo-192x192.png',
-    //         sizes: '192x192',
-    //         type: 'image/png',
-    //       },
-    //       {
-    //         src: '/images/logo-512x512.png',
-    //         sizes: '512x512',
-    //         type: 'image/png',
-    //       },
-    //     ],
-    //   },
-    // },
     'gatsby-plugin-offline',
   ],
 };
