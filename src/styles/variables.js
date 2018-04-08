@@ -1,30 +1,7 @@
 import { css } from 'styled-components';
 
-export const colors = {
-  blue900: '#03E0F2',
-  gray500: '#03E0F2',
-  gray700: '#03E0F2',
-  yellow500: '#03E0F2',
-  yellow700: '#03E0F2',
-};
-
-export const fonts = {
-  sansSerif: '\'Roboto\', stack-sans, sans-serif',
-  mono: '\'Roboto Mono\', stack-mono, monospace',
-};
-
-export const spaces = {
-  p500: '5rem',
-  p400: '4rem',
-  p300: '3rem',
-  p200: '2rem',
-  p100: '1rem',
-  p50: '.5rem',
-  p25: '.25rem',
-};
-
-export const mq = {
-  xs: '22em',
+export const sizes = {
+  xs: '22.5em',
   sm: '40em',
   md: '54em',
   lg: '78em',
@@ -32,50 +9,34 @@ export const mq = {
 };
 
 export const media = {
-  xs: (...a) => css`
-    @media (max-width: ${mq.xs}) {
-      ${css(...a)}
+  xs: (...args) => css`
+    @media (max-width: ${sizes.xs}) {
+      ${css(...args)}
     }
   `,
-  sm: (...a) => css`
-    @media (max-width: ${mq.sm}) {
-      ${css(...a)}
+  sm: (...args) => css`
+    @media (max-width: ${sizes.sm}) {
+      ${css(...args)}
     }
   `,
-  md: (...a) => css`
-    @media (max-width: ${mq.md}) {
-      ${css(...a)}
+  md: (...args) => css`
+    @media (max-width: ${sizes.md}) {
+      ${css(...args)}
     }
   `,
-  lg: (...a) => css`
-    @media (max-width: ${mq.lg}) {
-      ${css(...a)}
+  lg: (...args) => css`
+    @media (max-width: ${sizes.lg}) {
+      ${css(...args)}
     }
   `,
-  xl: (...a) => css`
-    @media (max-width: ${mq.xl}) {
-      ${css(...a)}
+  xl: (...args) => css`
+    @media (max-width: ${sizes.xl}) {
+      ${css(...args)}
     }
   `,
-  hover: (...a) => css`
+  hover: (...args) => css`
     @media not all and (hover: none) {
-      ${css(...a)}
+      ${css(...args)}
     }
   `,
 };
-
-const rule = (d, v) => `${d}: ${v};`;
-
-export const getOuterSpace = p =>
-  css`
-    ${rule(p, spaces.p500)}
-    ${media.lg`
-      ${rule(p, spaces.p300)}
-    `}
-    ${media.md`
-      ${rule(p, spaces.p300)}
-    `}
-    ${media.sm`
-      ${rule(p, spaces.p200)}
-    `}
-  `;

@@ -6,7 +6,6 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 import SEO from '../components/SEO';
-import ProjectHeader from '../components/ProjectHeader';
 import ProjectPagination from '../components/ProjectPagination';
 
 import { Container as IndividualContainer } from '../styles/shared';
@@ -28,12 +27,6 @@ const Project = (props) => {
       <Helmet title={`${project.title} | Portfolio`} />
       <SEO postPath={slug} postNode={postNode} postSEO />
       <Container>
-        {/* <ProjectHeader
-          avatar={config.avatar}
-          name={config.name}
-          title={project.title}
-          areas={project.areas}
-        /> */}
         <Images>
           <Img sizes={project.cover.childImageSharp.sizes} />
         </Images>

@@ -2,19 +2,19 @@ import Typography from 'typography';
 
 
 const typography = new Typography({
-  baseFontSize: '16px',
+  baseFontSize: '18px',
   baseLineHeight: 1.5,
-  headerFontFamily: ['Fira Sans', 'sans-serif'],
-  bodyFontFamily: ['Open Sans', 'sans-serif'],
+  headerFontFamily: ['Fira Serif', 'serif'],
+  bodyFontFamily: ['Roboto Condensed', 'sans-serif'],
   scaleRatio: 2.5,
   headerWeight: 700,
   googleFonts: [
     {
-      name: 'Fira Sans',
+      name: 'Fira Serif',
       styles: ['700'],
     },
     {
-      name: 'Open Sans',
+      name: 'Roboto Condensed',
       styles: ['400'],
     },
   ],

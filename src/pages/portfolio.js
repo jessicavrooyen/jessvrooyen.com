@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Container as ImageContainer } from '../styles/shared';
+import { Container as ImageContainer, StyledHeading2 } from '../styles/shared';
 import Card from '../components/Card';
 
 const Grid = styled.div`
@@ -27,12 +27,7 @@ const Index = (props) => {
 
   return (
     <div>
-      {/* <Header
-        avatar={config.avatar}
-        name={config.name}
-        location={config.location}
-        socialMedia={config.socialMedia}
-      /> */}
+      <StyledHeading2>Portfolio</StyledHeading2>
       <Container>
         <Grid>
           {projectEdges.map(project => (
